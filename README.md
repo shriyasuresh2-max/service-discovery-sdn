@@ -20,9 +20,7 @@ forwarding rules as service state changes.
 | h3 | Weather server | 10.0.0.3 | UDP 5001 |
 | h4 | File server | 10.0.0.4 | UDP 5002 |
 
-All hosts connect to one OpenFlow 1.3 switch (`s1`). The controller listens for
-OpenFlow on TCP 6653 and serves its HTTP API on port 8080 (reachable from h1 at
-`http://10.0.0.254:8080`).
+All hosts connect to one OpenFlow 1.3 switch (`s1`), managed by the SDN controller implemented in `controller/sdn_controller.py`. The controller listens for OpenFlow on TCP 6653 and serves its HTTP API on port 8080 (reachable from h1 at `http://10.0.0.254:8080`). The Mininet topology and host configuration are defined in `topology.py`.
 
 ## Repository layout
 ```
